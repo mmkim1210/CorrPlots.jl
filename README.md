@@ -14,6 +14,8 @@ n = 15
 r = cor(rand(n, n))
 begin
     f, ax, p = corrplot(r; diagonal = true, colormap = :RdBu_10, colorrange = (-1, 1))
+    xlims!(ax, 0, n)
+    ylims!(ax, -n, 0)
     ax.aspect = DataAspect()
     ax.xticks = (0.5:(n - 0.5), "cov " .* string.(1:n))
     ax.xticklabelrotation = π / 4

@@ -5,7 +5,7 @@ using CairoMakie
 """
     corrplot(r::AbstractMatrix)
 
-Correlation plot of matrix `r`.
+Correlation plot of matrix `r`, which does not have to be symmetric.
 
 # Keyword arguments
 ```
